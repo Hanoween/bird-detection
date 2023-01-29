@@ -48,12 +48,12 @@ class Net(nn.Module):
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = Net()
-model.load_state_dict(torch.load('C:/Users/peggy/Desktop/BirdFinder/BirdModel3.pth'))
+model.load_state_dict(torch.load('./BirdModel3.pth'))
 
 if torch.cuda.is_available():
     model.cuda()
 
-with open('C:/Users/peggy/Desktop/BirdFinder/birdmap.pkl', 'rb') as f:
+with open('./birdmap.pkl', 'rb') as f:
     bird_map = pkl.load(f)
 
 def process_img(images):

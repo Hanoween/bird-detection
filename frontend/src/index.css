@@ -1,13 +1,308 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.banner {
+  width: 100%;
+  height: 105vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.40)), url(./images/bird.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.navBar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.large {
+  font-size: 60px;
+}
+.padding {
+ padding: 30px 0 50px 0;
+ font-size: larger;
+}
+
+.banner .navBar .name {
+  font-family: 'Lilita One', cursive;
+  font-size: 50px;
+  color: #EFEEEC;
+}
+
+.name {
+  width: 120px;
+  cursor: pointer;
+}
+
+.navBar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navBar ul li a {
+  text-decoration: none;
+  color: #EFEEEC;
+  text-transform: uppercase;
+
+}
+
+.navBar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #6be359;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.navBar ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: antiquewhite;
+}
+
+.content h1 {
+  font-size: 30px;
+  margin-top: 80px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.content button {
+  position: relative;
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  font-weight: bold;
+  border: 2px solid #50dd34;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.content span {
+  background: rgb(114, 197, 59);
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.4s;
+
+}
+
+button:hover span {
+  width: 100%;
+}
+
+.display-page {
+  background-image: url(images/sakura.jpg);
+  background-size: cover;
+}
+
+.display {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #f23857;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  gap: 50px;
+  padding: 30px 75px;
+}
+
+.upload * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Righteous', cursive;
+  ;
+
+}
+
+.upload body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#D2635A, #521324);
+
+}
+
+.upload ::selection {
+  color: #fff;
+  background: #b61a0c;
+}
+
+.upload {
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)),url(images/sakura.jpg);
+  background-size: cover;
+  height: 760px;
+}
+
+.upload .wrapper {
+  border-style: solid;
+  border-width: 3px;
+  background: #fefefe;
+  padding: 30px;
+  width: 700px;
+  height: 500px;
+  border-radius: 40px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  position: relative;
+  top: 140px;
+  background-color: #F7F5EB;
+
+}
+
+.upload .wrapper header {
+  color: #B10430;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.upload .wrapper form {
+  margin: 50px auto;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  flex-direction: column;
+  border: 5px dashed #B10430
+}
+
+.upload .wrapper button {
+  margin: auto;
+  width: 75px;
+  height: 35px;
+  background-color: #f23857;
+  border-radius: 10px;
+}
+
+.upload form :where(i, p) {
+  color: #B10430;
+}
+
+.upload form i {
+  font-size: 50px;
+}
+
+.upload form browse {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.upload section .row {
+  background: linear-gradient(#fda74b, #f5f5c3);
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upload section .row i {
+  font-size: 30px;
+  color: #B10430;
+}
+
+.upload section .details span {
+  font-size: 14px;
+}
+
+.upload .progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.upload .progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+
+.upload .progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  background: #dfd27f;
+  margin-bottom: 4px;
+  border-radius: 30px;
+}
+
+.upload .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #8E082B;
+  border-radius: inherit;
+}
+
+.upload .uploaded-area {
+  max-height: 230px;
+  overflow-y: scroll;
+}
+
+.upload .uploaded-area.onprogress {
+  max-height: 150px;
+}
+
+.upload .uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.upload .uploaded-area .row .content {
+  display: flex;
+  align-items: center;
+}
+
+.upload .uploaded-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.upload .uploaded-area .details .size {
+  font-size: 11px;
+  color: #B10430;
+}
+
+.upload .uploaded-area i.fa-check {
+  font-size: 16px;
 }
